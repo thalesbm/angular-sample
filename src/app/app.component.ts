@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { UserService } from './user.service';
+import { UserService } from './service/user.service';
+import { User } from './models/user';
 
 @Component({
   selector: 'app-root',
@@ -10,16 +11,22 @@ import { UserService } from './user.service';
 export class AppComponent {
   title = 'my-app';
 
-  share() {
-    window.alert('The product has been shared!');
-    this.loadUser()
+  get() {
+    // this.loadUser()
+    this.getCars()
   }
 
-  constructor(private userService: UserService) {}
-  profile = {};
+  clickMessage: string;
 
-  loadUser() {
-    this.userService.getUser().subscribe(data => this.profile = data);
-    window.alert(this.profile);
+  constructor(private userService: UserService) {
   }
+
+  user: User;
+
+  getCars() {
+    this.userService.getCars().subscribe((user: User) => {
+      this.user = user;
+      this.clickMessage = user.data;
+    });
+   }
 }
