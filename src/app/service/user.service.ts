@@ -13,7 +13,7 @@ export class UserService {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
   }
 
-  getCars(): Observable<User> {
+  getUser(): Observable<User> {
     return this.http.get<User>("https://reqres.in/api/users/2", this.httpOptions);
   }
 }

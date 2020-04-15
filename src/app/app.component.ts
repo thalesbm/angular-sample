@@ -16,17 +16,13 @@ export class AppComponent {
     this.getCars()
   }
 
-  clickMessage: string;
+  responseMessage: string;
 
   constructor(private userService: UserService) {
   }
-
-  user: User;
-
   getCars() {
-    this.userService.getCars().subscribe((user: User) => {
-      this.user = user;
-      this.clickMessage = user.data;
+    this.userService.getUser().subscribe((user: User) => {
+      this.responseMessage = user.data;
     });
    }
 }
