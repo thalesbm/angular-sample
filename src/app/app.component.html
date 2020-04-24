@@ -1,9 +1,23 @@
 <html>
+  <body class="bodyStyle">
+    <form>
 
-  <body>
-    <button mat-raised-button color="primary" (click)="goToUser()">
-      See User
-    </button>
+        <mat-form-field appearance="outline" color="primary">
+          <mat-label>Nome Completo</mat-label>
+          <input matInput value="">
+        </mat-form-field>
+
+        <br>
+
+        <mat-form-field appearance="outline" color="primary">
+          <mat-label>Idade</mat-label>
+          <input matInput value="">
+        </mat-form-field>
+        
+        <br>
+
+        <button mat-raised-button color="primary" (click)="saveUser()" color="primary">SAVE</button>
+
+      </form>
   </body>
-
 </html>

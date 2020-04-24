@@ -1,0 +1,25 @@
+.bodyStyle {
+    background:#D3D3D3;
+    padding: 16px;
+}
+
+.mat-form-field {
+    width: 100%;
+}
+
+.mat-raised-button {
+    width: 100%;
+}
+
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+    color: purple;
+}
+::ng-deep .mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
+    color: purple;
+}
+::ng-deep .mat-form-field-appearance-outline.mat-focused .mat-form-field-label { 
+    color: purple; 
+}
+::ng-deep .mat-form-field .mat-form-field-label {
+    color: purple; 
+}
