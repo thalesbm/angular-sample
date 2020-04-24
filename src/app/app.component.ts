@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
-import { UserService } from './service/user.service';
-import { User } from './models/user';
-
+import { UserService } from './user/service/UserService';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -11,18 +9,7 @@ import { User } from './models/user';
 export class AppComponent {
   title = 'my-app';
 
-  get() {
-    // this.loadUser()
-    this.getCars()
+  goToUser() {
+    
   }
-
-  responseMessage: string;
-
-  constructor(private userService: UserService) {
-  }
-  getCars() {
-    this.userService.getUser().subscribe((user: User) => {
-      this.responseMessage = user.data;
-    });
-   }
 }

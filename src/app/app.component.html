@@ -1,13 +1,11 @@
 <html>
 
   <body>
-
-    <button (click)="get()">
-      GET
+    <button (click)="goToUser()">
+      See User
     </button>
 
-    {{responseMessage | json}}
-    
+    <li><a routerLink="/user-component" routerLinkActive="active">User Component</a></li>
   </body>
 
 </html>
