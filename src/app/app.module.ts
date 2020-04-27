@@ -10,6 +10,8 @@ import { UserService } from './user/service/UserService';
 import { UserComponent } from './user/user.component';
 import { SecondComponent } from './second/second.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatRadioModule } from '@angular/material/radio';
+
 
 @NgModule({
   declarations: [
@@ -23,7 +25,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HttpClientModule,
     BrowserAnimationsModule,
     MatButtonModule,
-    MatInputModule
+    MatInputModule,
+    MatRadioModule
   ],
   providers: [UserService],
   bootstrap: [AppComponent]

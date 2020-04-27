@@ -16,7 +16,16 @@
         
         <br>
 
-        <button mat-raised-button color="primary" (click)="saveUser()" color="primary">SAVE</button>
+        <label>Sexo</label>
+        <mat-radio-group aria-labelledby="radio-group-label" class="radio-group">
+          <mat-radio-button *ngFor="let sex of sex" [value]="sex">
+            {{sex}}
+          </mat-radio-button>
+        </mat-radio-group>
+
+        <br>
+
+        <button mat-raised-button color="primary" (click)="saveUser()" color="primary">Salvar</button>
 
       </form>
   </body>

@@ -12,4 +12,6 @@ export class AppComponent {
   saveUser() {
     
   }
+
+  sex: string[] = ['Masculino', 'Feminino'];
 }
