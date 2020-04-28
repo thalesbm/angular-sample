@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { MatInputModule } from '@angular/material/input';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,7 +10,8 @@ import { UserComponent } from './user/user.component';
 import { SecondComponent } from './second/second.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatRadioModule } from '@angular/material/radio';
-
+import { MatSelectModule } from '@angular/material/select';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
 @NgModule({
   declarations: [
@@ -19,6 +19,7 @@ import { MatRadioModule } from '@angular/material/radio';
     UserComponent,
     SecondComponent
   ],
+
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -26,9 +27,13 @@ import { MatRadioModule } from '@angular/material/radio';
     BrowserAnimationsModule,
     MatButtonModule,
     MatInputModule,
-    MatRadioModule
+    MatRadioModule,
+    MatSelectModule,
+    MatCheckboxModule
   ],
+
   providers: [UserService],
+
   bootstrap: [AppComponent]
 })
 

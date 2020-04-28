@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { UserService } from './user/service/UserService';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -9,9 +9,15 @@ import { UserService } from './user/service/UserService';
 export class AppComponent {
   title = 'my-app';
 
+  sex: string[] = ['Masculino', 'Feminino'];
+
+  foods: FoodModel[] = [
+    {value: 'carne-0', viewValue: 'Carne'},
+    {value: 'pizza-1', viewValue: 'Pizza'},
+    {value: 'tacos-2', viewValue: 'Tacos'}
+  ];
+
   saveUser() {
     
   }
-
-  sex: string[] = ['Masculino', 'Feminino'];
 }

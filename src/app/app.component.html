@@ -25,6 +25,20 @@
 
         <br>
 
+        <label>Comida Preferida</label>      
+        <mat-select>
+          <mat-option *ngFor="let food of foods" [value]="food.value">
+            {{food.viewValue}}
+          </mat-option>
+        </mat-select>
+
+        <br>
+
+        <section class="example-section">
+          <mat-checkbox class="example-margin" [(ngModel)]="checked">Cerveja</mat-checkbox>
+          <mat-checkbox class="example-margin" [(ngModel)]="checked">Vinho</mat-checkbox>
+        </section>
+
         <button mat-raised-button color="primary" (click)="saveUser()" color="primary">Salvar</button>
 
       </form>
